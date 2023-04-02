@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TO DO LIST</title>
+    <style>
+        /* general styles */
+        body {
+            background-color: #F5F5F5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* table styles */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            background-color: white;
+
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td a {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        td a.delete {
+            background-color: #FF3B3F;
+            color: white;
+        }
+
+        td a.delete:hover {
+            background-color: #B22D31;
+        }
+
+        td a.update {
+            background-color: #00BFFF;
+            color: white;
+        }
+
+        td a.update:hover {
+            background-color: #0082C9;
+        }
+
+        /* page title */
+        h1 {
+            color: #0a9b14;
+            text-align: center;
+            margin-right: 50;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* "add task" button */
+        h4 {
+            text-align: center;
+            margin-right: 40px;
+        }
+
+        h4 a {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #00c8ff;
+            color: white;
+            text-decoration: none;
+        }
+
+        h4 a:hover {
+            background-color: #0082C9;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>TO DO LIST</h1>
+    <h4><a href="/add" type="button">ADD Task</a></h4>
+    <table>
+        <thead>
+            <tr>
+                <th>TASK</th>
+                <th>DATE TO COMPLETE</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for task3 in data %}
+            <tr>
+                <td>{{ task3.newtask }}</td>
+                <td>{{ task3.date }}</td>
+                <td><a href="/remove/{{task3.id}}/" type="button">Delete</a></td>
+                <td><a href="/update/{{task3.id}}/" type=" button">Update</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

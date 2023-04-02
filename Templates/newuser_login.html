@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>New User</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 5px #4CAF50;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SIGN_UP</h1>
+    <form action="/signupp" method="POST">
+        <p>
+            <label for="Name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </p>
+        <label for="emailid">Email_id</label>
+        <input type="text" name="email_id" id="email_id" required>
+
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
+
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </p>
+        <input type="submit" value="Sign_up">
+        <a href="/" type="button">Login</a>
+    </form>
+</body>
+
+</html>
+
+</html>

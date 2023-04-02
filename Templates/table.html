@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Database</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+            /* increased padding for better spacing */
+            border: 1px solid #ccc;
+            /* use a lighter color for borders */
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            /* added bold font weight for headers */
+        }
+
+        td a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #008CBA;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            /* added a smooth transition on hover */
+        }
+
+        td a:hover {
+            background-color: #006080;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Dabase of people</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>Username</th>
+                <th>Email_id</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in logins %}
+
+            <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.email_id}}</td>
+                <td>{{data.password}}</td>
+                <td><a href="/deleteacc/{{data.id}}/" type="button">delete</a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+
+</html>

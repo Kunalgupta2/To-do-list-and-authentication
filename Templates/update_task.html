@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>New task</title>
+    <style>
+        /* Change background color to light gray */
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Increase the width of the input fields */
+        input[type=text],
+        input[type=date] {
+            width: 100%;
+            max-width: 600px;
+            /* Set a max width to prevent fields from becoming too wide */
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            /* Remove the border */
+            border-radius: 4px;
+            /* Add rounded corners */
+        }
+
+        /* Change the font size of the labels */
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Style the submit button */
+        input[type=submit] {
+            width: 100%;
+            max-width: 200px;
+            /* Set a max width to prevent button from becoming too wide */
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Change the color and font size of the title */
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TO DO LIST</h1>
+    <form action="/update/{{id}}" method="POST">
+        <p><label for="new task">new task</label>
+            <input type="text" value="{{task.newtask}}" name="new task">
+        </p><br><br>
+        <p><label for="date of completion">date of completion</label>
+            <input type="date" name="date" value="{{task.date}}">
+        </p><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+
+</html>

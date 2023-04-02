@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>New task</title>
+    <style>
+        /* general styles */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 60%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 0px #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TO DO LIST</h1>
+    <form action="/register" method="POST">
+        <p><label for="new task">new task</label>
+            <input type="text" id="new task" placeholder="enter new task" name="new task" required>
+        </p>
+        <br><br>
+        <p><label for="date of completion">date of completion</label>
+            <input type="date" name="date" id="date" required>
+        </p>
+        <br><br>
+        <p>
+            <input type="submit" value="register">
+        </p>
+    </form>
+</body>
+
+</html>
