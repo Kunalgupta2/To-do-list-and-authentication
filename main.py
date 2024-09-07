@@ -143,9 +143,8 @@ def register():
         db.session.add(task1)
         db.session.commit()
 
-        
-    
         return redirect("/taskadd")
+    
     
 @app.route("/remove/<int:id>/")
 def remove(id):
